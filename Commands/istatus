@@ -1,0 +1,1 @@
+osascript -e "tell applications \"iTunes\" to player state as string"

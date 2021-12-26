@@ -1,0 +1,1 @@
+sass --watch $1.scss $1.css

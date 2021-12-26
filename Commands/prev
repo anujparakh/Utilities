@@ -1,0 +1,2 @@
+osascript -e "tell application \"iTunes\" to play previous track";
+isong; isinger

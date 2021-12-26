@@ -1,0 +1,1 @@
+cp ./"font\ names/$1.png" ./Content/Fonts/$1/preview.png;

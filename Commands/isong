@@ -1,0 +1,1 @@
+osascript -e "tell applications \"iTunes\" to name of current track" 

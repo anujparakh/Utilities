@@ -1,0 +1,1 @@
+psql -h csce-315-db.engr.tamu.edu -U anujparakh -d oursql21

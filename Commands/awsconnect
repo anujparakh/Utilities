@@ -1,0 +1,1 @@
+ssh -i ~/Documents/College\ Documents/Fifth\ Semester/CSCE\ 313/Linux\ Stuff/the-virus-key.pem ec2-user@ec2-54-159-20-138.compute-1.amazonaws.com

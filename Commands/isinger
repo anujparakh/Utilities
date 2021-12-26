@@ -1,0 +1,1 @@
+osascript -e "tell applications \"iTunes\" to artist of current track"

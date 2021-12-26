@@ -1,0 +1,1 @@
+psql -c "\copy conference from 'conference.csv' CSV HEADER" -h csce-315-db.engr.tamu.edu -U anujparakh -d oursql21

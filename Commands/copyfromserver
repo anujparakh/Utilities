@@ -1,0 +1,1 @@
+scp -r anujparakh@compute.cse.tamu.edu:/home/ugrads/a/anujparakh/$1 $2
