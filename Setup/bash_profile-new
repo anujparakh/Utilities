@@ -1,0 +1,48 @@
+
+# ----- PERSONAL ALIASES AND SETTINGS  -----
+alias ll="ls -la"
+alias ff="find . -iname $1"
+alias hammer="vscode ~/.hammerspoon/init.lua"
+alias karabiner="vscode ~/.config/karabiner/karabiner.json"
+alias copy="tr -d '\n' | pbcopy" # removes newline from pbcopy
+alias usernumber="echo -n '153704' | copy"
+alias issue="emacs ~/Commands/issue.txt"
+alias javalist="/usr/libexec/java_home -V"
+# ** ANGI STUFF *
+alias gci="cat ~/Commands/issue.txt | copy; git add .; git commit"
+alias office="cd /Users/anuj.parakh/Documents/Projects/Angi/office-app; npm start $1"
+# ** GIT STUFF **
+alias gc="git add .; git commit"
+alias gs="git status"
+alias gp="git push"
+alias gclean="git reset --hard; git clean -fd"
+alias gforget="git checkout -- $1"
+alias gblist="git branch --list"
+alias gout="git checkout $1"
+# ***************
+
+alias vscode="open $1 -a /Applications/Visual\ Studio\ Code.app"
+
+export CLICOLOR=1
+export LSCOLORS=gxDxexfxBxexHxgxhxhxfx
+# ------------------------------------------
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+##
+# Your previous /Users/anuj.parakh/.bash_profile file was backed up as /Users/anuj.parakh/.bash_profile.macports-saved_2021-09-30_at_17:10:40
+##
+
+# MacPorts Installer addition on 2021-09-30_at_17:10:40: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/anuj.parakh/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
+
+# Commands
+export PATH="$PATH:/Users/anuj.parakh/Commands"
