@@ -1,12 +1,8 @@
 import requests
-import urllib.request
-
+import adp-cookie
 # Anything in or before this year won't be saved
 CUTOFF_YEAR = 2020
 
-# TODO: REMOVE COOKIE BEFORE COMMITING
-# TODO: ENTER COOKIE FROM DEVTOOLS AFTER LOGING INTO https://my.adp.com
-cookie = "<ENTER COOKIE HERE>"
 folder = input('Enter folder to save downloaded paystubs: ')
 
 response = requests.get("https://my.adp.com/v1_0/O/A/payStatements?adjustments=yes&numberoflastpaydates=300", headers={"Cookie": cookie})
@@ -20,7 +16,7 @@ for statement in (response.json()["payStatements"]):
 
     # Make request
     pdfUrl = f'https://my.adp.com/{statement["statementImageUri"]["href"][4:]}'
-    pdfResponse = requests.get(pdfUrl, headers={"Cookie": cookie})
+    pdfResponse = requests.get(pdfUrl, headers={"Cookie": adp-cookie.cookie})
 
 
     # Write file
