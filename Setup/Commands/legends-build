@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/Broadleaf-Legends/CommerceAPI;
+mvn clean install -Dmaven.test.skip=true

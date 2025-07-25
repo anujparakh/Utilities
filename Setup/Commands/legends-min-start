@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/Broadleaf-Legends/CommerceAPI/flexpackages/min;
+mvn spring-boot:run;

@@ -1,0 +1,9 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/Code/CommerceAPI/flexpackages/balanced/docker;
+
+if [ "$1" == "down" ]; then
+    echo "Going down!";
+    docker-compose down;
+else
+    echo "Starting up!";
+    docker-compose up -d && ./check-services-status.sh;
+fi

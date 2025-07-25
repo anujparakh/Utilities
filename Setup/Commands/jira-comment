@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for ticket in $1
+do
+    jira issue comment add PUSC-$ticket "$2" --no-input;
+done;

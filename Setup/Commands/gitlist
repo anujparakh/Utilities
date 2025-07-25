@@ -1,0 +1,4 @@
+echo "Git Aliases"
+echo "-----------"
+cat ~/.bash_profile | grep "alias g"
+echo "-----------"

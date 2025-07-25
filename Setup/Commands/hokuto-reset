@@ -1,0 +1,3 @@
+scutil --set HostName Hokuto;
+scutil --set LocalHostName Hokuto;
+scutil --set ComputerName Hokuto;

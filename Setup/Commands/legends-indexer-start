@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/Broadleaf-Legends/CommerceAPI/services/indexer;
+mvn spring-boot:run -Dspring-boot.run.profiles=localdev,min;

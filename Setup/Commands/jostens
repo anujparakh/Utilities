@@ -1,0 +1,52 @@
+#!/bin/bash
+# Script to run different Maven commands for Jostens application
+# Usage: ./jostens-run <command> - runs different Maven commands based on parameter
+
+cd /Users/anuj.parakh/Documents/Projects/Jostens/application/manifest;
+
+if [ "$1" == "data" ]; then
+    echo "Starting data service!";
+    ./mvnw spring-boot:run -f ../data;
+elif [ "$1" == "generate" ]; then
+    echo "Running flex:generate!";
+    ./mvnw flex:generate;
+elif [ "$1" == "docker" ]; then
+    if [ "$2" == "down" ]; then
+        echo "Stopping Docker Compose services!";
+        ./mvnw docker-compose:down;
+    elif [ "$2" == "pull" ]; then
+        echo "Pulling Docker images!";
+        ./mvnw docker-compose:pull;
+    else
+        echo "Starting Docker Compose services!";
+        ./mvnw docker-compose:up;
+    fi
+elif [ "$1" == "branch" ]; then
+    if [ -z "$2" ]; then
+        echo "Error: Please provide a branch name";
+        echo "Usage: ./jostens branch <branch-name>";
+        exit 1;
+    fi
+    echo "Copying cmd for new git branch: feature/B2B2C-$2";
+    cd ..;
+    echo "git checkout -b "feature/B2B2C-$2"" | pbcopy;
+elif [ "$1" == "password" ] || [ "$1" == "pass" ]; then
+    echo "Copying admin password to clipboard!";
+    val=$(grep '^SPRING_LIQUIBASE_PARAMETERS_BLCADMINPASSWORD=' ../security/credentials-report.env | cut -d'=' -f2-);
+    echo "$val";
+    echo -n "$val" | pbcopy;
+elif [ "$1" == "help" ]; then
+    echo "Available commands:";
+    echo "  data      - Start the data service (spring-boot:run -f ../data)";
+    echo "  generate  - Run flex:generate";
+    echo "  docker    - Manage Docker Compose services (up by default, or 'down' to stop)";
+    echo "  branch    - Create a new git branch with feature/B2B2C- prefix (usage: branch <name>)";
+    echo "  pass|password - Copy the admin password to clipboard";
+    echo "  help      - Show this help message";
+    echo "  <other>   - Run any other Maven command (./mvnw <command>)";
+    echo "";
+    echo "Usage: ./jostens <command> [options]";
+else
+    echo "Running Maven command: $1";
+    ./mvnw "$1";
+fi

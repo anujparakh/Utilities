@@ -1,0 +1,2 @@
+echo "export JAVA_HOME=`/usr/libexec/java_home -v 1.8`" | pbcopy;
+echo "Copied command for Java 1.8 to Clipboard!";

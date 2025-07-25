@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/client-legends-starters/MicroservicesDemo/flexpackages/min/docker;
+./check-services-status.sh

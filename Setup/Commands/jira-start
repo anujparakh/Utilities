@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for ticket in $1
+do
+    jira issue move PUSC-$ticket "Start Progress";
+    jira-assign $ticket;
+done;
+

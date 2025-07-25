@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Angi/comms/comm-render/src/cypress-test;
+npx cypress open -e cfg=$1;

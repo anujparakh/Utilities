@@ -1,4 +1,3 @@
-
 # ----- PERSONAL ALIASES AND SETTINGS  -----
 alias ll="ls -la"
 alias ff="find . -iname $1"
@@ -10,15 +9,16 @@ alias issue="emacs ~/Commands/issue.txt"
 alias javalist="/usr/libexec/java_home -V"
 # ** ANGI STUFF *
 alias gci="cat ~/Commands/issue.txt | copy; git add .; git commit"
-alias office="cd /Users/anuj.parakh/Documents/Projects/Angi/office-app; npm start $1"
 # ** GIT STUFF **
 alias gc="git add .; git commit"
+alias gcm="git add .; git commit -m $1"
 alias gs="git status"
 alias gp="git push"
 alias gclean="git reset --hard; git clean -fd"
 alias gforget="git checkout -- $1"
 alias gblist="git branch --list"
 alias gout="git checkout $1"
+alias gbranch="git checkout -b $1"
 # ***************
 
 alias vscode="open $1 -a /Applications/Visual\ Studio\ Code.app"
@@ -46,3 +46,31 @@ export PATH="$PATH:/Users/anuj.parakh/Library/Application Support/Coursier/bin"
 
 # Commands
 export PATH="$PATH:/Users/anuj.parakh/Commands"
+
+# Jira Token
+export JIRA_API_TOKEN="O4p1NDIbETsCG1sPSfyhB943"
+
+# Kafka
+export PATH="$PATH:/Users/anuj.parakh/Downloads/Applications/kafka_2.13-3.1.0/bin"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PYTHON="/usr/bin/python3"
+
+# MacPorts Installer addition on 2024-05-16_at_22:26:59: adding an appropriate MANPATH variable for use with MacPorts.
+export MANPATH="/opt/local/share/man:$MANPATH"
+# Finished adapting your MANPATH environment variable for use with MacPorts.
+
+
+# Bash completion for jostens-run
+_jostens_run_completions() {
+    local cur="${COMP_WORDS[COMP_CWORD]}"
+    local opts="data docker generate branch pass help"
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+}
+complete -F _jostens_run_completions jostens
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/anuj.parakh/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

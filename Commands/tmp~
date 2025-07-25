@@ -1,2 +1,0 @@
-mkdir /tmp/dir;
-touch tmp/dir/ITWORKED.txt

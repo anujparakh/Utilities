@@ -1,0 +1,2 @@
+cd /Users/anuj.parakh/Documents/Projects/Legends/Broadleaf-Legends/CommerceApp/packages/standard;
+yarn test:e2e-eshops:remote $@;
